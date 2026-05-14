@@ -1,11 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="hsl(217 91% 60%)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-  <rect width="9" height="12" x="2" y="4" rx="1.5" fill="hsl(217 91% 60%)" fill-opacity="0.1"></rect>
-  <rect width="9" height="12" x="13" y="8" rx="1.5" fill="hsl(217 91% 60%)" fill-opacity="0.2"></rect>
-  <line x1="6.5" y1="8" x2="6.5" y2="12"></line>
-  <line x1="6.5" y1="13" x2="6.5" y2="14"></line>
-  <line x1="17.5" y1="12" x2="17.5" y2="16"></line>
-  <line x1="17.5" y1="17" x2="17.5" y2="18"></line>
-  <path d="M8 18L16 10"></path>
-  <polyline points="13 10 16 10 16 13"></polyline>
-  <polyline points="11 18 8 18 8 15"></polyline>
+  <rect width="7" height="9" x="3" y="3" rx="1" fill="hsl(217 91% 60%)" fill-opacity="0.1"></rect>
+  <rect width="7" height="5" x="14" y="3" rx="1" fill="hsl(217 91% 60%)" fill-opacity="0.2"></rect>
+  <rect width="7" height="9" x="14" y="12" rx="1" fill="hsl(217 91% 60%)" fill-opacity="0.15"></rect>
+  <rect width="7" height="5" x="3" y="16" rx="1" fill="hsl(217 91% 60%)" fill-opacity="0.25"></rect>
 </svg>

@@ -5,7 +5,7 @@
   </picture>
 </p>
 
-<h1 align="center">مقارن | Muqaren</h1>
+<h1 align="center">مقارن</h1>
 
 <p align="center">
   <strong>منصة مقارنة أسعار الفنادق — قارن بين أجودا وبوكينج فوراً</strong>

@@ -5,7 +5,7 @@
   </picture>
 </p>
 
-<h1 align="center">Muqaren | مقارن</h1>
+<h1 align="center">Muqaren</h1>
 
 <p align="center">
   <strong>Hotel Price Comparison Platform — Compare Agoda &amp; Booking.com Instantly</strong>
