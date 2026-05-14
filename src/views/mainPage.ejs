@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/mainStylesheet.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&display=swap"
+    />
+    <title><%= title %></title>
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="nav-container">
+          <div class="nav-wrapper">
+            <div class="nav-brand">
+              <div class="logo">
+                <a href="/">
+                  <img
+                    src="/assets/images/logo.png"
+                    alt="مقارن"
+                    class="logo-img"
+                  />
+                  <h1>مقارن</h1>
+                </a>
+              </div>
+              <div class="nav-links">
+                <a href="#" class="nav-link active">
+                  <i class="fas fa-hotel"></i>
+                  <span>الفنادق</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main id="main-content">
+      <section class="hero">
+        <div class="hero-content">
+          <h2>أفضل تجربة مقارنة مع مقارن</h2>
+          <p>قارن بين أفضل الأسعار عالميًا واحصل على أفضل العروض في دقائق</p>
+
+          <div class="search-container">
+            <form class="search-form" id="search-form">
+              <div class="search-item destination-wrapper">
+                <label><i class="fas fa-map-marker-alt"></i> الوجهة</label>
+                <div class="destination-input-wrapper">
+                  <input
+                    type="text"
+                    id="destination"
+                    placeholder="أين تريد الذهاب؟"
+                    autocomplete="off"
+                  />
+                </div>
+              </div>
+              <div class="search-item date-range">
+                <label><i class="far fa-calendar-alt"></i> الإقامة</label>
+                <div class="calendar-container">
+                  <div class="calendar-trigger" id="calendar-trigger">
+                    <div class="date-display">
+                      <span class="date-part" id="check-in-display"
+                        >تسجيل الدخول</span
+                      >
+                      <span class="date-separator">إلى</span>
+                      <span class="date-part" id="check-out-display"
+                        >تسجيل الخروج</span
+                      >
+                    </div>
+                  </div>
+                  <div class="custom-calendar" id="custom-calendar">
+                    <div class="calendar-header">
+                      <div class="calendar-nav">
+                        <button
+                          type="button"
+                          class="prev-month"
+                          id="prev-month"
+                        >
+                          <i class="fas fa-chevron-right"></i>
+                        </button>
+                        <div class="month-year-selector">
+                          <select class="month-selector" id="month-selector">
+                            <option value="0">يناير</option>
+                            <option value="1">فبراير</option>
+                            <option value="2">مارس</option>
+                            <option value="3">أبريل</option>
+                            <option value="4">مايو</option>
+                            <option value="5">يونيو</option>
+                            <option value="6">يوليو</option>
+                            <option value="7">أغسطس</option>
+                            <option value="8">سبتمبر</option>
+                            <option value="9">أكتوبر</option>
+                            <option value="10">نوفمبر</option>
+                            <option value="11">ديسمبر</option>
+                          </select>
+                          <select
+                            class="year-selector"
+                            id="year-selector"
+                          ></select>
+                        </div>
+                        <button
+                          type="button"
+                          class="next-month"
+                          id="next-month"
+                        >
+                          <i class="fas fa-chevron-left"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="calendar-weekdays">
+                      <div class="weekday">ح</div>
+                      <div class="weekday">ن</div>
+                      <div class="weekday">ث</div>
+                      <div class="weekday">ر</div>
+                      <div class="weekday">خ</div>
+                      <div class="weekday">ج</div>
+                      <div class="weekday">س</div>
+                    </div>
+                    <div class="calendar-days" id="calendar-days"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="search-item">
+                <label><i class="fas fa-hotel"></i> الغرف والنزلاء</label>
+                <input
+                  type="text"
+                  id="rooms"
+                  placeholder="1 غرفة، 2 بالغين"
+                  readonly
+                  required
+                />
+                <div class="rooms-dropdown" id="rooms-dropdown">
+                  <div class="dropdown-header">
+                    <h4>اختر عدد الغرف والنزلاء</h4>
+                  </div>
+                  <div class="room-selection">
+                    <div class="room-selection-option">
+                      <span class="room-label">عدد الغرف</span>
+                      <div class="guest-controls">
+                        <button
+                          type="button"
+                          class="guest-btn minus-btn"
+                          id="room-minus"
+                        >
+                          -
+                        </button>
+                        <span class="guest-count" id="rooms-count">1</span>
+                        <button
+                          type="button"
+                          class="guest-btn plus-btn"
+                          id="room-plus"
+                        >
+                          +
+                        </button>
+                      </div>
+                    </div>
+                    <div class="room-selection-option">
+                      <span class="room-label">البالغين</span>
+                      <div class="guest-controls">
+                        <button
+                          type="button"
+                          class="guest-btn minus-btn"
+                          id="adults-minus"
+                        >
+                          -
+                        </button>
+                        <span class="guest-count" id="adults-count">2</span>
+                        <button
+                          type="button"
+                          class="guest-btn plus-btn"
+                          id="adults-plus"
+                        >
+                          +
+                        </button>
+                      </div>
+                    </div>
+                    <div class="room-selection-option">
+                      <span class="room-label">الأطفال</span>
+                      <div class="guest-controls">
+                        <button
+                          type="button"
+                          class="guest-btn minus-btn"
+                          id="children-minus"
+                        >
+                          -
+                        </button>
+                        <span class="guest-count" id="children-count">0</span>
+                        <button
+                          type="button"
+                          class="guest-btn plus-btn"
+                          id="children-plus"
+                        >
+                          +
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <button class="search-btn" type="submit">
+                بحث <i class="fas fa-search"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-bottom">
+        <p class="copyright">&copy; 2025 مقارن. جميع الحقوق محفوظة.</p>
+        <a
+          href="https://red-shadows-rs.com"
+          target="_blank"
+          class="rs-logo-link"
+        >
+          <span class="rs-text">RED SHADOWS | RS</span>
+          <img
+            src="/assets/images/red-shadows-rs.png"
+            alt="RED SHADOWS | RS"
+            class="rs-logo"
+          />
+        </a>
+      </div>
+    </footer>
+    <script src="/javascripts/masterJavascript.js"></script>
+  </body>
+</html>
